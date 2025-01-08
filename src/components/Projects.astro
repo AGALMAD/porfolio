@@ -46,10 +46,10 @@ const PROJECTS = [
     title: "Farm In House",
     description:
       "E-Commerce de productos ecológicos con un diseño innovador que incorpora inteligencia artificial para la valoración de reseñas. Ofrece opciones de pago con tarjeta y Ethereum.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
+    link: "https://farminhouse.vercel.app/",
+    github: "https://github.com/moguism/ECommerce",
     image: "/projects/ecommerce.jpg",
-    tags: [TAGS.CS, TAGS.AspNet, TAGS.Angular,TAGS.TailwindCss],
+    tags: [TAGS.AspNet, TAGS.Angular,TAGS.TailwindCss],
   },
   
   {
@@ -64,7 +64,7 @@ const PROJECTS = [
 ];
 ---
 
-<div class="flex flex-col gap-y-16">
+<div class="flex flex-col gap-y-16 mx-4 ml-6">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
@@ -88,7 +88,7 @@ const PROJECTS = [
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex flex-row gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
                   >
                     <tag.icon class="size-4" />
                     {tag.name}
