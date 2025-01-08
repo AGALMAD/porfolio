@@ -49,16 +49,16 @@ const PROJECTS = [
     link: "https://farminhouse.vercel.app/",
     github: "https://github.com/moguism/ECommerce",
     image: "/projects/ecommerce.jpg",
-    tags: [TAGS.AspNet, TAGS.Angular,TAGS.TailwindCss],
+    tags: [TAGS.AspNet, TAGS.Angular],
   },
   
   {
     title: "PowerZone",
-    description:
-      "Aplicación móvil que te guía en tus rutinas de gimnasio. Ofrece planes de entrenamiento personalizados, seguimiento de progreso y videos instructivos para cada ejercicio. Ideal para todos los niveles de fitness.",
+    description: "Aplicación móvil diseñada para optimizar rutinas de gimnasio. Incluye autenticación mediante Firebase, seguimiento del progreso y videos instructivos de alta calidad para cada ejercicio.",    
     github: "https://github.com/AGALMAD/GymApp",
     image: "/projects/GymApp.jpg",
     tags: [TAGS.Kotlin, TAGS.Firebase],
+    upgrades:"Implementación de API REST con Spring Boot"
   },
   
 ];
@@ -66,7 +66,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16 mx-4 ml-6">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, upgrades }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -99,6 +99,9 @@ const PROJECTS = [
 
             <div class="mt-2 text-gray-700 dark:text-gray-400">
               {description}
+              {upgrades && (
+                <p class=" dark:[&>strong]:text-[#D8D96f] [&>strong]:text-[#6472b1]"><strong>En proceso : </strong>{upgrades}</p>
+              )}
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
               {github && (
