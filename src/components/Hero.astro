@@ -1,0 +1,76 @@
+---
+const personalImageAlt = "Alejandro Gálvez";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import CopyEmailButton from './CopyEmailButton.astro';
+
+function copyEmail() {
+  var email = "miemail@example.com";
+  navigator.clipboard.writeText(email).then(
+    function () {
+      alert("Correo copiado al portapapeles: " + email);
+    },
+    function (err) {
+      alert("Error al copiar el correo: " + err);
+    }
+  );
+}
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="/public/foto-perfil.jpg"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://www.linkedin.com/in/alejandrogalma/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Estudiante</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-[#102139] sm:text-5xl dark:text-[#e9e9e7]"
+  >
+    Hola, soy Alejandro
+  </h1>
+  <p
+    class="mt-6 text-xl dark:[&>strong]:text-[#D8D96f] [&>strong]:text-[#6472b1] [&>strong]:font-semibold"
+  >
+    <strong
+      >Estudiante de Grado Superior Desarrollo de Aplicaciones Multiplataforma
+    </strong> en CPIFP Alan Turing. Málaga, España 🇪🇸.
+  </p>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-[#D8D96f] [&>strong]:text-[#6472b1] [&>strong]:font-semibold dark:text-gray-300"
+  >
+    Uniendo mis dos pasiones: <strong>el deporte</strong> y <strong
+      >la tecnología</strong
+    >, para alcanzar el máximo rendimiento en ambos.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:galvezmaduenoalejandro@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/alejandrogalma/">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+
+    <CopyEmailButton />
+
+  </nav>
+</div>
+
+<style>
+  h1 {
+    font-family: "Galindo", system-ui;
+  }
+</style>

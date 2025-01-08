@@ -1,0 +1,14 @@
+---
+const email = "galvezmaduenoalejandro@gmail.com";
+---
+
+<button
+  id="button"
+  onclick={`navigator.clipboard.writeText('${email}').then(() => alert('Correo copiado en el portapapeles'))`}
+  class="group text-xl flex flex-row cursor-pointer"
+>
+  {email} 
+  <i class="fa-solid fa-copy ml-2 group-hover:scale-150 group-hover:ml-2 duration-500 "></i>
+</button>
+
+
