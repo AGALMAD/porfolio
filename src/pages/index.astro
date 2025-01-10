@@ -17,9 +17,13 @@ import SkillList from "@/components/SkillList.astro";
   description="Contrata a Alejandro para crear tu aplicación web o móvil"
 >
   <main class="px-4">
-    <SectionContainer id="hero" class="py-16 md:py-36">
-      <Hero />
-    </SectionContainer>
+
+    <SectionContainer id="about-me" class="py-16 md:py-36">
+      <TitleSection>
+        Hola, soy Alejandro
+      </TitleSection>
+      <AboutMe />    </SectionContainer>
+
   </main>
   <div class="space-y-24">
     <SectionContainer id="proyectos">
@@ -39,11 +43,7 @@ import SkillList from "@/components/SkillList.astro";
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
-      <TitleSection>
-        <ProfileCheck class="size-8 ml-4" />
-        Sobre mí
-      </TitleSection>
-      <AboutMe />
+      
     </SectionContainer>
   </div>
 </Layout>
