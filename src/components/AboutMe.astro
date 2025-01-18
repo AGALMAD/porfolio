@@ -1,5 +1,9 @@
 ---
  const personalImageAlt = "Alejandro Gálvez"
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import CopyEmailButton from './CopyEmailButton.astro';
 ---
 
 <article class=" group flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
@@ -19,3 +23,15 @@
 
 </article>
 
+
+<nav class="flex flex-wrap gap-4 mt-8">
+  <SocialPill href="mailto:galvezmaduenoalejandro@gmail.com">
+    <MailIcon class="size-4" />
+    Contáctame
+  </SocialPill>
+  <SocialPill href="https://www.linkedin.com/in/alejandrogalma/">
+    <LinkedInIcon class="size-4" />
+    LinkedIn
+  </SocialPill>
+
+</nav>
